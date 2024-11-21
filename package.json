@@ -1,0 +1,32 @@
+{
+  "name": "paddle",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run lint && tsc && vite build",
+    "lint": "eslint src",
+    "deploy": "../../scripts/copy-assets.sh paddle && yarn build && rune upload dist",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "rune-sdk": "^4.25.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.8.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.0.2",
+    "typescript-eslint": "^8.12.2",
+    "vite": "^4.5.5",
+    "vite-plugin-qrcode": "^0.2.2"
+  }
+}
